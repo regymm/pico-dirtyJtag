@@ -13,12 +13,12 @@
 #define BOARD_RP2040_ZERO    5
 
 // Select the board type from the above
-#define BOARD_TYPE BOARD_PICO
+//#define BOARD_TYPE BOARD_PICO
 //#define BOARD_TYPE BOARD_ADAFRUIT_ITSY
 //#define BOARD_TYPE BOARD_SPOKE_RP2040
 //#define BOARD_TYPE BOARD_WERKZEUG
 //#define BOARD_TYPE BOARD_QMTECH_RP2040_DAUGHTERBOARD
-//#define BOARD_TYPE BOARD_RP2040_ZERO
+#define BOARD_TYPE BOARD_RP2040_ZERO
 
 // General mapping
 // TDI  SPIO RX
@@ -140,12 +140,12 @@
 
 #elif ( BOARD_TYPE == BOARD_RP2040_ZERO )
 
-#define PIN_TDI 0
-#define PIN_TDO 3
+#define PIN_TDI 4
+#define PIN_TDO 5
 #define PIN_TCK 2
-#define PIN_TMS 1
-#define PIN_RST 4
-#define PIN_TRST 5
+#define PIN_TMS 3
+#define PIN_RST 20
+#define PIN_TRST 21
 
 // the LED is actually a ws2812 neopixel, using a
 // spare pin where we could attach a led, updating the
@@ -158,8 +158,8 @@
 #if ( USB_CDC_UART_BRIDGE )
 #define PIN_UART_INTF_COUNT 2
 #define PIN_UART0       uart0
-#define PIN_UART0_TX    12
-#define PIN_UART0_RX    13
+#define PIN_UART0_TX    0
+#define PIN_UART0_RX    1
 #define PIN_UART1       uart1
 #define PIN_UART1_TX    8
 #define PIN_UART1_RX    9
